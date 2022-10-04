@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopForm));
             this.ShopNameLabel = new System.Windows.Forms.Label();
             this.PenTextBox = new System.Windows.Forms.TextBox();
             this.StickTextBox = new System.Windows.Forms.TextBox();
@@ -122,6 +123,7 @@
             this.CalculateButton1.TabIndex = 8;
             this.CalculateButton1.Text = "Calculate Totals";
             this.CalculateButton1.UseVisualStyleBackColor = true;
+            this.CalculateButton1.Click += new System.EventHandler(this.CalculateButton1_Click);
             // 
             // SubTotalLabel
             // 
@@ -134,10 +136,9 @@
             // 
             // SubTotalLabel2
             // 
-            this.SubTotalLabel2.AutoSize = true;
             this.SubTotalLabel2.Location = new System.Drawing.Point(117, 197);
             this.SubTotalLabel2.Name = "SubTotalLabel2";
-            this.SubTotalLabel2.Size = new System.Drawing.Size(13, 13);
+            this.SubTotalLabel2.Size = new System.Drawing.Size(86, 13);
             this.SubTotalLabel2.TabIndex = 10;
             this.SubTotalLabel2.Text = "_";
             // 
@@ -152,10 +153,9 @@
             // 
             // TaxLabel2
             // 
-            this.TaxLabel2.AutoSize = true;
             this.TaxLabel2.Location = new System.Drawing.Point(117, 227);
             this.TaxLabel2.Name = "TaxLabel2";
-            this.TaxLabel2.Size = new System.Drawing.Size(13, 13);
+            this.TaxLabel2.Size = new System.Drawing.Size(86, 13);
             this.TaxLabel2.TabIndex = 12;
             this.TaxLabel2.Text = "_";
             // 
@@ -170,10 +170,9 @@
             // 
             // TotalLabel2
             // 
-            this.TotalLabel2.AutoSize = true;
             this.TotalLabel2.Location = new System.Drawing.Point(117, 259);
             this.TotalLabel2.Name = "TotalLabel2";
-            this.TotalLabel2.Size = new System.Drawing.Size(13, 13);
+            this.TotalLabel2.Size = new System.Drawing.Size(86, 13);
             this.TotalLabel2.TabIndex = 14;
             this.TotalLabel2.Text = "_";
             // 
@@ -211,6 +210,7 @@
             this.CalculateChangeButton.TabIndex = 18;
             this.CalculateChangeButton.Text = "Calculate Change";
             this.CalculateChangeButton.UseVisualStyleBackColor = true;
+            this.CalculateChangeButton.Click += new System.EventHandler(this.CalculateChangeButton_Click);
             // 
             // ChangeLabel
             // 
@@ -223,10 +223,9 @@
             // 
             // ChangeLabel2
             // 
-            this.ChangeLabel2.AutoSize = true;
             this.ChangeLabel2.Location = new System.Drawing.Point(98, 376);
             this.ChangeLabel2.Name = "ChangeLabel2";
-            this.ChangeLabel2.Size = new System.Drawing.Size(13, 13);
+            this.ChangeLabel2.Size = new System.Drawing.Size(127, 13);
             this.ChangeLabel2.TabIndex = 20;
             this.ChangeLabel2.Text = "_";
             // 
@@ -238,23 +237,26 @@
             this.PrintButton.TabIndex = 21;
             this.PrintButton.Text = "Print Receipt";
             this.PrintButton.UseVisualStyleBackColor = true;
+            this.PrintButton.Click += new System.EventHandler(this.PrintButton_Click);
             // 
             // Receipt
             // 
             this.Receipt.BackColor = System.Drawing.Color.Crimson;
-            this.Receipt.Location = new System.Drawing.Point(337, 57);
+            this.Receipt.Font = new System.Drawing.Font("Courier New", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Receipt.Location = new System.Drawing.Point(337, 43);
             this.Receipt.Name = "Receipt";
-            this.Receipt.Size = new System.Drawing.Size(262, 332);
+            this.Receipt.Size = new System.Drawing.Size(262, 343);
             this.Receipt.TabIndex = 22;
             // 
             // NewOrderButton
             // 
-            this.NewOrderButton.Location = new System.Drawing.Point(351, 403);
+            this.NewOrderButton.Location = new System.Drawing.Point(352, 394);
             this.NewOrderButton.Name = "NewOrderButton";
             this.NewOrderButton.Size = new System.Drawing.Size(231, 31);
             this.NewOrderButton.TabIndex = 23;
             this.NewOrderButton.Text = "New Order";
             this.NewOrderButton.UseVisualStyleBackColor = true;
+            this.NewOrderButton.Click += new System.EventHandler(this.NewOrderButton_Click);
             // 
             // ShopForm
             // 
@@ -285,6 +287,7 @@
             this.Controls.Add(this.StickTextBox);
             this.Controls.Add(this.PenTextBox);
             this.Controls.Add(this.ShopNameLabel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ShopForm";
             this.Text = "Useless Weapon Shop";
             this.Load += new System.EventHandler(this.ShopForm_Load);
